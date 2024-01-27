@@ -1,0 +1,21 @@
+[package]
+name = "xxx_ui"
+version = "0.1.0"
+authors = ["Luo Jiejun <ljj@knd.com.cn>"]
+edition = "2021"
+rust-version = "1.75.0"
+
+[dependencies]
+egui = "0.25.0"
+egui_extras = "0.25.0"
+eframe = { version = "0.25.0", features = ["persistence"] }
+
+tracing-subscriber = "0.3"
+anyhow = "1.0.66"
+clap = { version = "4", features = ["derive"] }
+
+[profile.release]
+strip = true
+
+[build-dependencies]
+embed-resource = "1.5.1"
